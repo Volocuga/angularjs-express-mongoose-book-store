@@ -17,24 +17,19 @@ const bookSchema = mongoose.Schema({
         require: true
     },
     authot: {
-        type: String,
-        require: true
+        type: String
     },
     publisher: {
-        type: String,
-        require: true
+        type: String
     },
     pages: {
-        type: Number,
-        require: true
+        type: Number
     },
     image_url: {
-        type: String,
-        require: true
+        type: String
     },
     bay_url: {
-        type: String,
-        require: true
+        type: String
     },
 });
 
@@ -46,4 +41,28 @@ module.exports.getBooks = (callback, limit) => {
 
 module.exports.getBookById = (id, callback) => {
     Book.findById(id, callback);
+}
+
+module.exports.addBook = (book, callback) => {
+    Book.create(book, callback);
+}
+
+module.exports.updateBook = (id, book, options, callback) => {
+    let query = { _id: id }
+    let update = {
+        title: book.title,
+        genre: book.genre,
+        description: book.description,
+        authot: book.authot,
+        publisher: book.publisher,
+        pages: book.pages,
+        image_url: book.image_url,
+        bay_url: book.bay_url
+    }
+    Book.findByIdAndUpdate(query, update, options, callback);
+}
+
+module.exports.removeBook = (id, callback) => {
+    let query = { _id: id };
+    Book.remove(query, callback);
 }
