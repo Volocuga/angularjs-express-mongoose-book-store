@@ -1,0 +1,43 @@
+<div class="card-deck" ng-init="getBooks()">
+    <div class="card mt-4">
+        <div class="card-header text-center">
+            Books
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-2">
+                <aside>
+                        <ul class="book-genres">
+                                <li><a href="#">Novel</a></li>
+                                <li><a href="#">Detective</a></li>
+                                <li><a href="#">Crime</a></li>
+                                <li><a href="#">Drama</a></li>
+                                <li><a href="#">Horrors</a></li>
+                            </ul>
+                </aside>
+            </div>
+            <div class="col-12 col-md-10">
+                <div class="books-content">
+                    <div class="row">
+                        <div class="col-12 col-md-6" ng-repeat="book in booksList">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-lg-8">
+                                        <h5 class="card-title">{{ book.title }}</h5>
+                                        <p class="card-text">{{ book.description }}</p>
+                                       
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <img ng-src="{{book.image_url}}" class="card-img-top" alt="book image">
+                                    </div>
+                                   <div class="card-footer">
+                                            <a href="#!/book/details/{{book._id}}" class="btn btn-primary">See more</a>
+                                          </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

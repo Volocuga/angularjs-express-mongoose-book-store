@@ -1,0 +1,21 @@
+<a href="#!/books" class="btn btn-info">Go Back</a>
+<div class="card-deck" ng-init="getBook()">
+  <div class="card mt-4">
+    <div class="card-header text-center">
+      Books
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="open-book">  
+          <img ng-src="{{bookDetails.image_url}}" class="card-img-top" alt="book image">
+          <h4 class="card-title">{{ bookDetails.title }}</h4>
+          <p class="card-text">{{ bookDetails.description }}</p>
+          <p class="card-text">{{ bookDetails.description }}</p>
+          <p class="card-text">{{ bookDetails.description }}</p>
+        </div>
+      </div>
+    </div>
+    <div>
+      <a href="#!/book/edit/{{bookDetails._id}}"> Edit </a> |
+      <a href="#" id="deleteBook" ng-click="deleteBook()">Delete Book</a></div>
+  </div>

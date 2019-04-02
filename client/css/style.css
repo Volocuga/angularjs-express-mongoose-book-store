@@ -1,0 +1,100 @@
+.card-header {
+    margin-bottom: 26px;
+    border: none;
+    border-radius: 7px !important;
+}
+
+.book-genres {
+    list-style: none;
+    padding: 0;
+}
+
+.book-genres li a {
+    width: 100%;
+    display: inline-block;
+    padding: 6px 0;
+}
+
+.card {
+    border: none;
+}
+
+.card-body {
+    box-shadow: 0 0 6px rgba(0, 0, 0, .5);
+    margin-bottom: 26px;
+}
+
+.card-text {
+    height: 196px;
+    overflow: hidden;
+}
+
+.card-footer {
+    border:none;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 12px;
+}
+
+.title-section {
+    margin: 16px 0;
+    text-align: center;
+}
+
+.form-add-book,
+.form-edit-book {
+    border: 1px solid #ccc;
+    padding: 20px 26px;
+    border-radius: 7px;
+    width: 80%;
+    margin: 0 auto 36px;
+}
+
+.form-add-book > input,
+.form-add-book > textarea,
+.form-add-book > select,
+.form-edit-book>input,
+.form-edit-book>textarea,
+.form-edit-book>select {
+    width: 100%;
+    margin-bottom: 14px;
+}
+
+.form-add-book > textarea,
+.form-edit-book>textarea {
+    height: 110px;
+}
+
+.form-add-book > select,
+.form-edit-book>select {
+    width: 300px;
+}
+
+.form-add-book>input[type=submit],
+.form-edit-book>input[type=submit] {
+    width: 250px;
+    height: 42px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 0.25rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.open-book {
+    width: 100%;
+}
+
+.open-book>img {
+    width: 250px;
+    float: left;
+    margin-right: 35px;
+    margin-bottom: 20px;
+}
+
+.open-book .card-text {
+    height: auto;
+}

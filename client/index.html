@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="bookstore">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <title>BookStore</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+      Bootstrap
+    </a>
+    <button class="btn btn-primary">
+      <a href="#!/book/add" class="text-white">Add book</a>
+    </button>
+  </nav>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div ng-view></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./bower_components/angular/angular.js"></script>
+  <script src="./bower_components/angular-route/angular-route.js"></script>
+  <script src="./bower_components/jquery/dist/jquery.js"></script>
+  <script src="./bower_components/bootstrap/dist/js/bootstrap.js"></script>
+
+  <script src="./app.js"></script>
+  <script src="./controllers/booksCtrl.js"></script>
+  <script src="./controllers/genresCtrl.js"></script>
+
+</body>
+
+</html>
